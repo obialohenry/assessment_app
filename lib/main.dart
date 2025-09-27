@@ -18,7 +18,13 @@ class MyApp extends StatelessWidget {
     return WidgetsApp(
       debugShowCheckedModeBanner: false,
       color: AppColors.kWhite,
-      builder: (context, child) => const OnboardingScreen(),
+      builder: (context, child) {
+        return Navigator(
+          onGenerateRoute: (settings) {
+            return PageRouteBuilder(pageBuilder: (context, _, __) => const OnboardingScreen());
+          },
+        );
+      }
     );
   }
 }
