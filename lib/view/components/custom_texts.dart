@@ -1,6 +1,6 @@
 import 'package:assessment_app/cofig/app_colors.dart';
 import 'package:assessment_app/cofig/app_strings.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class TextView extends StatelessWidget {
   ///Creates a display widget for local strings.

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Gap extends StatelessWidget {
   ///Creates a space of whatever [size] property you pass in.

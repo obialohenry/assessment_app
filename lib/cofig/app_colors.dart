@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 ///A class for managing all color constants used in the app.
 class AppColors {
