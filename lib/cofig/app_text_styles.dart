@@ -50,7 +50,7 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     fontSize: 11,
     height: (12/11),
-    color: AppColors.kRoyalViolet,
+    color: AppColors.kIndigoViolet,
     letterSpacing: 0,
     decoration: TextDecoration.none,
   );
@@ -70,7 +70,7 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     fontSize: 8,
     height: (10/8),
-    color: AppColors.kRoyalViolet,
+    color: AppColors.kIndigoViolet,
     letterSpacing: 0,
     decoration: TextDecoration.none,
   );

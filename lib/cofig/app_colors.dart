@@ -8,4 +8,6 @@ class AppColors {
   static const kTransparent = Color(0x00000000);
   static const kViolet10 = Color(0x1A7A5AF8);
   static const kIndigoViolet = Color(0xff2C0A84);
+  static const kSoftLilac = Color(0xffD5CEE6);
+  static const kBlack40 = Color(0x66000000);
 }

@@ -11,6 +11,10 @@ class AppStrings {
   static const lblFeed = "Feed";
   static const lblMedia = "Media";
   static const lblEvents = "Events";
+  static const lblAdmin = "Admin";
+  static const lblLike = "Like";
+  static const lblComment = "Comment";
+  static const lblShare = "Share";
 
   // Buttons
   static const btnContinueWithApple = 'Continue with Apple ID';

@@ -15,7 +15,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: AppSpacing.lg, right: AppSpacing.lg, top: AppSpacing.xl),
+      padding: EdgeInsets.only(left: AppSpacing.lg, right: AppSpacing.lg, top: AppSpacing.xxl),
       decoration: BoxDecoration(
         image: DecorationImage(image: AssetImage(AppImages.onboardingImage), fit: BoxFit.cover),
       ),
@@ -238,7 +238,7 @@ class _SelectLanguageBottomSheetWidgetState extends State<SelectLanguageBottomSh
               ),
             ),
             Gap(AppSpacing.lg),
-            Container(height: 1, width: double.infinity, color: AppColors.kViolet10),
+            DividerWidget(height: 1, color: AppColors.kViolet10),
             Gap(AppSpacing.lg),
             ...onboardingProvider.localeLanguages.map(
               (language) => LanguageType(

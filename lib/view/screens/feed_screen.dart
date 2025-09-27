@@ -1,6 +1,5 @@
 import 'package:assessment_app/src/components.dart';
 import 'package:assessment_app/src/config.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CommunityFeedScreen extends StatefulWidget {
@@ -17,7 +16,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     AppImages.memberImage,
     AppImages.profileImage,
   ];
-  final List<String> _feedTab = [AppStrings.lblFeed, AppStrings.lblMedia, AppStrings.lblEvents];
+  int _currentTab = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -128,11 +127,292 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 ),
               ),
             ),
-            Gap(AppSpacing.sm),
-          ///[Tab]
+
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height * 0.75,
+              child: Column(
+                children: [
+                  ///[Tabs]
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: AppSpacing.lg),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        TabWidget(label: AppStrings.lblFeed, currentTab: _currentTab, page: 0),
+                        TabWidget(label: AppStrings.lblMedia, currentTab: _currentTab, page: 1),
+                        TabWidget(label: AppStrings.lblEvents, currentTab: _currentTab, page: 2),
+                      ],
+                    ),
+                  ),
+
+                  ///[TabView].
+                  Expanded(
+                    child: PageView(
+                      onPageChanged: (value) {
+                        _currentTab = value;
+                        setState(() {});
+                      },
+                      children: [
+                        ///[Feed View]
+                        Column(
+                          children: [
+                            DividerWidget(height: 2, color: AppColors.kViolet10),
+                            Gap(AppSpacing.lg),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      AProfileImage(),
+                                      Gap(AppSpacing.sm),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              TextView(
+                                                text: "Anthony",
+                                                textStyle: AppTextStyles.bodyNormal.copyWith(
+                                                  color: AppColors.kIndigoViolet,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              Gap(AppSpacing.xs),
+                                              Image.asset(
+                                                AppImages.verifiedIcon,
+                                                width: 12,
+                                                height: 12,
+                                              ),
+                                              Gap(AppSpacing.sm),
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(
+                                                    AppSpacing.sm,
+                                                  ),
+                                                  color: AppColors.kViolet10,
+                                                ),
+                                                child: Center(
+                                                  child: TextView(
+                                                    text: AppStrings.lblAdmin,
+                                                    textStyle: AppTextStyles.small,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Gap(AppSpacing.xs),
+                                          TextView(
+                                            text: "Just now",
+                                            textStyle: AppTextStyles.large,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Image.asset(AppImages.moreIcon, width: 24, height: 24),
+                                ],
+                              ),
+                            ),
+                            Gap(AppSpacing.lg),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+                              child: Column(
+                                children: [
+                                  TextView(
+                                    text:
+                                        "Congratulations to @Adekoya for the new whip. "
+                                        "Who's available for a quick spin around the city in my Benzo!!",
+                                    maxLines: 3,
+                                    textStyle: AppTextStyles.bodyNormal.copyWith(
+                                      color: AppColors.kIndigoViolet,
+                                    ),
+                                  ),
+                                  Gap(AppSpacing.sm),
+                                  Container(
+                                    height: 200,
+                                    padding: EdgeInsets.all(AppSpacing.sm),
+                                    alignment: Alignment.bottomCenter,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(AppImages.carImage),
+                                        fit: BoxFit.cover,
+                                      ),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          height: 21,
+                                          width: 33,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(4),
+                                            color: AppColors.kBlack40,
+                                          ),
+                                          child: Center(
+                                            child: TextView(
+                                              text: "0:59",
+                                              textStyle: AppTextStyles.bodySmall,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          height: 21,
+                                          width: 24,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(4),
+                                            color: AppColors.kBlack40,
+                                          ),
+                                          child: Image.asset(
+                                            AppImages.muteIcon,
+                                            width: 16,
+                                            height: 16,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Gap(AppSpacing.lg),
+                            Padding(
+                              padding: EdgeInsetsGeometry.symmetric(horizontal: AppSpacing.lg),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      FeedActionButton(
+                                        logo: AppImages.likeIcon,
+                                        title: AppStrings.lblLike,
+                                      ),
+                                      Gap(AppSpacing.xl),
+                                      FeedActionButton(
+                                        logo: AppImages.commentIcon,
+                                        title: AppStrings.lblComment,
+                                      ),
+                                    ],
+                                  ),
+                                  FeedActionButton(
+                                    logo: AppImages.sendCommentIcon,
+                                    title: AppStrings.lblShare,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Gap(AppSpacing.lg),
+                            DividerWidget(height: 2, color: AppColors.kViolet10),
+                            Gap(AppSpacing.lg),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [AProfileImage()],
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        ///[Media View],
+                        Center(
+                          child: TextView(
+                            text: "Coming Soon.",
+                            textStyle: AppTextStyles.display.copyWith(
+                              color: AppColors.kIndigoViolet,
+                            ),
+                          ),
+                        ),
+
+                        ///[Events View]
+                        Center(
+                          child: TextView(
+                            text: "Coming Soon.",
+                            textStyle: AppTextStyles.display.copyWith(
+                              color: AppColors.kIndigoViolet,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class AProfileImage extends StatelessWidget {
+  ///Creates a widget displaying a user's profile picture.
+  const AProfileImage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Image.asset(AppImages.profileImage, width: 40, height: 40, fit: BoxFit.cover),
+    );
+  }
+}
+
+class FeedActionButton extends StatelessWidget {
+  ///Creates a widget displaying an image and a label for performing feed actions.
+  const FeedActionButton({super.key, required this.logo, required this.title});
+  final String logo;
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Image.asset(logo, width: 16, height: 16),
+        Gap(AppSpacing.sm),
+        TextView(
+          text: title,
+          textStyle: AppTextStyles.bodySmall.copyWith(color: AppColors.kIndigoViolet),
+        ),
+      ],
+    );
+  }
+}
+
+class TabWidget extends StatelessWidget {
+  ///Creates a widget displaying a tab label.
+  const TabWidget({super.key, required this.currentTab, required this.label, required this.page});
+  final int page;
+  final int currentTab;
+  final String label;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        TextView(
+          text: label,
+          textStyle: AppTextStyles.bodyNormal.copyWith(
+            fontWeight: FontWeight.w500,
+            color: currentTab == page ? AppColors.kIndigoViolet : AppColors.kSoftLilac,
+          ),
+        ),
+        currentTab == page
+            ? Row(
+                children: [
+                  Gap(AppSpacing.xs),
+                  Image.asset(
+                    AppImages.dropDownIcon,
+                    width: 16,
+                    height: 16,
+                    color: AppColors.kIndigoViolet,
+                  ),
+                ],
+              )
+            : SizedBox.shrink(),
+      ],
     );
   }
 }
