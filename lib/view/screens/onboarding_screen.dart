@@ -71,13 +71,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 }
 
-class SelectLanguageButton extends StatelessWidget {
+class SelectLanguageButton extends StatefulWidget {
   ///Creates a widget displaying user's selected app language.
   ///
   /// When tapped, it opens a bottom sheet dialog (`SelectLanguageBottomSheetWidget`)
   /// allowing the user to change their preferred locale.
   const SelectLanguageButton({super.key});
 
+  @override
+  State<SelectLanguageButton> createState() => _SelectLanguageButtonState();
+}
+
+class _SelectLanguageButtonState extends State<SelectLanguageButton> {
   Future<void> selectLanguageBottomSheet(BuildContext context) {
     return showGeneralDialog(
       context: context,

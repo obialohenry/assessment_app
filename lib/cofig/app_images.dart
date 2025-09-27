@@ -22,4 +22,6 @@ class AppImages {
   static const usersIcon = '${_baseUrl}users_icon.png';
   static const verifiedIcon = '${_baseUrl}verified_icon.png';
   static const closeIcon = '${_baseUrl}close_icon.png';
+  static const pupUpMenuIcon = '${_baseUrl}pop_up_menu_icon.png';
+  static const memberImage = '${_baseUrl}member_image.png';
 }

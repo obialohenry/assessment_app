@@ -7,6 +7,10 @@ class AppStrings {
   // Form
   static const hintComment = 'Write something..';
   static const lblSelectPreferredLanguage = "Select your preferred language";
+  static const lblLocal = "Local";
+  static const lblFeed = "Feed";
+  static const lblMedia = "Media";
+  static const lblEvents = "Events";
 
   // Buttons
   static const btnContinueWithApple = 'Continue with Apple ID';
