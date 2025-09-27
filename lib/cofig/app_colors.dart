@@ -5,4 +5,6 @@ class AppColors {
   static const kWhite = Color(0xffFFFFFF);
   static const kRoyalViolet = Color(0xff5925DC);
   static const kCrystalBlue = Color(0xff2E90FA);
+  static const kTransparent = Color(0x00000000);
+
 }
