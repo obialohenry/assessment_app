@@ -62,6 +62,10 @@ class OnboardingScreen extends StatelessWidget {
 }
 
 class SelectLanguageButton extends StatelessWidget {
+  ///Creates a widget displaying user's selected app language.
+  ///
+  /// When tapped, it opens a bottom sheet dialog (`SelectLanguageBottomSheetWidget`)
+  /// allowing the user to change their preferred locale.
   const SelectLanguageButton({super.key});
 
   Future<void> selectLanguageBottomSheet(BuildContext context) {
