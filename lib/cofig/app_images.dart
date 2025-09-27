@@ -21,4 +21,5 @@ class AppImages {
   static const settingsIcon = '${_baseUrl}settings_icon.png';
   static const usersIcon = '${_baseUrl}users_icon.png';
   static const verifiedIcon = '${_baseUrl}verified_icon.png';
+  static const closeIcon = '${_baseUrl}close_icon.png';
 }

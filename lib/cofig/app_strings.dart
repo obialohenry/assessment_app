@@ -6,6 +6,7 @@ class AppStrings {
 
   // Form
   static const hintComment = 'Write something..';
+  static const lblSelectPreferredLanguage = "Select your preferred language";
 
   // Buttons
   static const btnContinueWithApple = 'Continue with Apple ID';
