@@ -4,7 +4,8 @@ class AppSpacing {
   static const double smPlus = 10.0;
   static const double md = 12.0;
   static const double lg = 16.0;
-  static const xs = 4.0;
+  static const double xs = 4.0;
+  static const double xl = 48.0;
 }
 
 ///Creates a class to manage border radius constants in app.

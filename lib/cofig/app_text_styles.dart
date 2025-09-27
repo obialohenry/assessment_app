@@ -11,6 +11,7 @@ class AppTextStyles {
     height: (102/100),
     fontStyle: FontStyle.normal,
     color: AppColors.kWhite,
+    decoration: TextDecoration.none,
   );
 
   static const bodyLarge = TextStyle(
@@ -21,6 +22,7 @@ class AppTextStyles {
     height: (24/22),
     fontStyle: FontStyle.normal,
     color: AppColors.kWhite,
+    decoration: TextDecoration.none,
   );
 
   static const bodyNormal = TextStyle(
@@ -29,7 +31,8 @@ class AppTextStyles {
     fontSize: 15,
     height: (18/15),
     color: AppColors.kWhite,
-    letterSpacing: 0,fontStyle: FontStyle.normal,
+    letterSpacing: 0,
+    decoration: TextDecoration.none,
   );
 
   static const bodySmall = TextStyle(
@@ -38,7 +41,8 @@ class AppTextStyles {
     fontSize: 12,
     height: (140/100),
     color: AppColors.kWhite,
-    letterSpacing: 0,fontStyle: FontStyle.normal,
+    letterSpacing: 0,
+    decoration: TextDecoration.none,
   );
 
    static const large = TextStyle(
@@ -47,7 +51,8 @@ class AppTextStyles {
     fontSize: 11,
     height: (12/11),
     color: AppColors.kRoyalViolet,
-    letterSpacing: 0,fontStyle: FontStyle.normal,
+    letterSpacing: 0,
+    decoration: TextDecoration.none,
   );
 
   static const medium = TextStyle(
@@ -56,7 +61,8 @@ class AppTextStyles {
     fontSize: 15,
     height: (18/15),
     color: AppColors.kRoyalViolet,
-    letterSpacing: 0,fontStyle: FontStyle.normal,
+    letterSpacing: 0,
+    decoration: TextDecoration.none,
   );
 
    static const small = TextStyle(
@@ -65,6 +71,7 @@ class AppTextStyles {
     fontSize: 8,
     height: (10/8),
     color: AppColors.kRoyalViolet,
-    letterSpacing: 0,fontStyle: FontStyle.normal,
+    letterSpacing: 0,
+    decoration: TextDecoration.none,
   );
 }
