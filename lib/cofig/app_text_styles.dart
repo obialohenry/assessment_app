@@ -65,6 +65,16 @@ class AppTextStyles {
     decoration: TextDecoration.none,
   );
 
+  static const regular = TextStyle(
+    fontFamily: AppStrings.aeonik,
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    height: (16 / 14),
+    color: AppColors.kIndigoTint,
+    letterSpacing: 0,
+    decoration: TextDecoration.none,
+  );
+
    static const small = TextStyle(
     fontFamily: AppStrings.aeonik,
     fontWeight: FontWeight.w400,

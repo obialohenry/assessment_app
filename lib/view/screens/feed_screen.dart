@@ -209,9 +209,57 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [AProfileImage()],
+                                children: [
+                                  AProfileImage(),
+                                  Container(
+                                    height: 40,
+                                    width: 262,
+                                    padding: EdgeInsets.only(
+                                      top: AppSpacing.md,
+                                      bottom: AppSpacing.md,
+                                      left: 5,
+                                      right: 5,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(AppRadius.md),
+                                      border: Border.all(color: AppColors.kIndigoTint),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Image.asset(
+                                          AppImages.hintSuffixIcon,
+                                          width: 32,
+                                          height: 32,
+                                        ),
+                                        Gap(AppSpacing.xs),
+                                        TextView(
+                                          text: AppStrings.hintWriteSomething,
+                                          textStyle: AppTextStyles.regular,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: AppColors.kIndigoTint,
+                                    ),
+                                    child: Center(
+                                      child: Image.asset(
+                                        AppImages.sendCommentIcon,
+                                        color: AppColors.kWhite,
+                                        width: 15,
+                                        height: 15,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
+                            Gap(AppSpacing.lg),
+                            DividerWidget(height: 2, color: AppColors.kViolet10),
                           ],
                         ),
 

@@ -10,4 +10,5 @@ class AppColors {
   static const kIndigoViolet = Color(0xff2C0A84);
   static const kSoftLilac = Color(0xffD5CEE6);
   static const kBlack40 = Color(0x66000000);
+  static const kIndigoTint = Color(0xffEBE9FE);
 }

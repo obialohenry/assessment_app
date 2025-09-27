@@ -24,4 +24,5 @@ class AppImages {
   static const closeIcon = '${_baseUrl}close_icon.png';
   static const pupUpMenuIcon = '${_baseUrl}pop_up_menu_icon.png';
   static const memberImage = '${_baseUrl}member_image.png';
+  static const hintSuffixIcon = '${_baseUrl}comment_hint_suffix_icon.png';
 }
