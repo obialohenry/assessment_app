@@ -272,6 +272,15 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                             ),
                             Gap(AppSpacing.lg),
                             DividerWidget(height: 2, color: AppColors.kViolet10),
+                            Gap(AppSpacing.xl),
+                            Container(
+                              height: 5,
+                              width: 134,
+                              decoration: BoxDecoration(
+                                color: AppColors.kIndigoViolet,
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                            )
                           ],
                         ),
 
