@@ -13,6 +13,7 @@ A Flutter app built for a job assessment. This is a simple app with an onboardin
 ### Community Feed Screen
 ![App screenshot](./assets/screen_shots/community_feed.jpg)
 ![App screenshot](./assets/screen_shots/community_feed_1.jpg)
+![App screenshot](./assets/screen_shots/community_feed_2.jpg)
 
 ## Tech Stack
 
