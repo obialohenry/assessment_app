@@ -208,37 +208,49 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   AProfileImage(),
-                                  Container(
-                                    height: 40,
-                                    width: 262,
-                                    padding: EdgeInsets.only(
-                                      top: AppSpacing.md,
-                                      bottom: AppSpacing.md,
-                                      left: 5,
-                                      right: 5,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(AppRadius.md),
-                                      border: Border.all(color: AppColors.kIndigoTint),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Image.asset(
-                                          AppImages.hintSuffixIcon,
-                                          width: 32,
-                                          height: 32,
-                                        ),
-                                        Gap(AppSpacing.xs),
-                                        TextView(
-                                          text: AppStrings.hintWriteSomething,
-                                          textStyle: AppTextStyles.regular,
-                                        ),
-                                      ],
+                                  Gap(AppSpacing.sm),
+                                  Expanded(
+                                    child: Container(
+                                      height: 42,
+                                      padding: EdgeInsets.only(
+                                        top: AppSpacing.smPlus,
+                                        bottom: AppSpacing.smPlus,
+                                        left: 5,
+                                        right: 5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(AppRadius.md),
+                                        border: Border.all(color: AppColors.kIndigoTint),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            width: 25.6,
+                                            height: 25.6,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              border: Border.all(color: AppColors.kIndigoTint),
+                                            ),
+                                            child: Center(
+                                              child: Image.asset(
+                                                AppImages.tablerPhoto,
+                                                width: 12.8,
+                                                height: 12.8,
+                                              ),
+                                            ),
+                                          ),
+                                          Gap(AppSpacing.xs),
+                                          TextView(
+                                            text: AppStrings.hintWriteSomething,
+                                            textStyle: AppTextStyles.regular,
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
+                                  Gap(AppSpacing.sm),
                                   Container(
                                     width: 40,
                                     height: 40,
