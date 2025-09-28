@@ -1,3 +1,5 @@
+import 'package:flutter/widgets.dart';
+
 class OnboardingViewModel {
   OnboardingViewModel._();
   static final _internal = OnboardingViewModel._();
@@ -14,13 +16,12 @@ class OnboardingViewModel {
     "Korea",
     "Korea",
   ];
-  String _preferredLang = "English";
-  String get preferredLang => _preferredLang;
+  final ValueNotifier<String> preferredLang = ValueNotifier("English");
   List<String> get localeLanguages => _localeLanguages;
 
   ///Set user's preferred language to the selected language (String [value]).
   void setPreferredLanguage(String value) {
-    _preferredLang = value;
-    print("user preferred language: $_preferredLang");
+    preferredLang.value = value;
+    print("user preferred language: ${preferredLang.value}");
   }
 }

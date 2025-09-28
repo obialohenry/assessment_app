@@ -123,9 +123,11 @@ class _SelectLanguageButtonState extends State<SelectLanguageButton> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextView(
-                text: "${onboardingProvider.preferredLang} (US)",
-                textStyle: AppTextStyles.bodyNormal,
+              ValueListenableBuilder<String>(
+                valueListenable: onboardingProvider.preferredLang,
+                builder: (context, lang, _) {
+                  return TextView(text: "$lang (US)", textStyle: AppTextStyles.bodyNormal);
+                },
               ),
               Gap(AppSpacing.xs),
               Image.asset(AppImages.dropDownIcon, width: 16, height: 16, color: AppColors.kWhite),
@@ -242,11 +244,11 @@ class _SelectLanguageBottomSheetWidgetState extends State<SelectLanguageBottomSh
             Gap(AppSpacing.lg),
             ...onboardingProvider.localeLanguages.map(
               (language) => LanguageType(
-                preferredLang: onboardingProvider.preferredLang,
+                preferredLang: onboardingProvider.preferredLang.value,
                 lang: language,
                 onTap: () {
                   onboardingProvider.setPreferredLanguage(language);
-                  setState(() {});
+                  Navigator.pop(context);
                 },
               ),
             ),
